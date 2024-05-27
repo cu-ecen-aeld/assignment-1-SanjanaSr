@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Tester script for assignment 1 and assignment 2
 # Author: Siddhant Jajoo
 
@@ -33,11 +33,14 @@ rm -rf "${WRITEDIR}"
 
 # create $WRITEDIR if not assignment1
 assignment=`cat ../conf/assignment.txt`
-
-if [ $assignment != 'assignment1' ]
+expected_str="assignment1"
+echo "assignment = $assignment"
+echo "expected_str = $expected_str"
+if [ "$assignment" == "$expected_str" ]; then echo "Equal"; fi
+if [ "$assignment" == "$expected_str" ]
 then
 	mkdir -p "$WRITEDIR"
-
+       echo "here"
 	#The WRITEDIR is in quotes because if the directory path consists of spaces, then variable substitution will consider it as multiple argument.
 	#The quotes signify that the entire string in WRITEDIR is a single string.
 	#This issue can also be resolved by using double square brackets i.e [[ ]] instead of using quotes.
@@ -64,6 +67,7 @@ rm -rf /tmp/aeld-data
 
 set +e
 echo ${OUTPUTSTRING} | grep "${MATCHSTR}"
+
 if [ $? -eq 0 ]; then
 	echo "success"
 	exit 0
