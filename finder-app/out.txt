@@ -1,0 +1,14 @@
+Using default value AELD_IS_FUN for string to write
+Writing 10 files containing string AELD_IS_FUN to /tmp/aeld-data
+assignment = assignment1
+expected_str = assignment1
+Equal
+here
+/tmp/aeld-data created
+Using default value AELD_IS_FUN for string to write
+Writing 10 files containing string AELD_IS_FUN to /tmp/aeld-data
+assignment = assignment1
+expected_str = assignment1
+Equal
+here
+/tmp/aeld-data created
